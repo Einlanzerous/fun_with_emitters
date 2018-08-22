@@ -16,13 +16,11 @@ io.on('connection', (socket) => {
 
     socket.on('createMessage', (message) => {
         console.log(`Recieved new message\n`, message);
-    })
-
-    socket.emit('newMessage', {
-        from: 'server',
-        to: 'you@forsure.com',
-        text: 'Archer?',
-        createdAt: 123123
+        io.emit('newMessage', {
+            from: message.from,
+            text: message.text,
+            createdAt: new Date().getTime()
+        });
     });
 
     socket.on('disconnect', () => {
