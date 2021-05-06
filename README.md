@@ -4,11 +4,11 @@ Just working with event emitters/basic chat app
 
 # Welcome to ChatLand
 This is a basic chat app playing around with websockets, it includes chat rooms and users, though it doesn't have a signup stage. You can enter a chat room by entering a room name (it will default to 'General'), and you can enter your own name as seen here:
-[start a chat](readme_images/join)
+[start a chat](readme_images/join.png)
 
 # Share your location
 One of the features implemented is the ability to share your location if shared with the browser, as seen here:
-[share location](readme_images/chat_location)
+[share location](readme_images/chat_location.png)
 
 # How to setup
 
