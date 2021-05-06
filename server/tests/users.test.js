@@ -1,23 +1,27 @@
-const {Users} = require('../utils/users');
+const { Users } = require('../utils/users');
 
 describe('Test Users model', () => {
   let users = {};
 
   beforeEach(() => {
     users = new Users();
-    users.users = [{
-      id: 77,
-      name: 'James',
-      room: 'Node Course'
-    }, {
-      id: 150,
-      name: 'Milenda',
-      room: 'Loner Room'
-    }, {
-      id: 325,
-      name: 'Travis',
-      room: 'Node Course'
-    }];
+    users.users = [
+      {
+        id: 77,
+        name: 'James',
+        room: 'Node Course'
+      },
+      {
+        id: 150,
+        name: 'Milenda',
+        room: 'Loner Room'
+      },
+      {
+        id: 325,
+        name: 'Travis',
+        room: 'Node Course'
+      }
+    ];
   });
 
   test('Verify addUser', () => {
@@ -56,6 +60,5 @@ describe('Test Users model', () => {
 
     expect(nodeUserList).toEqual(['James', 'Travis']);
     expect(lonerUserList).toEqual(['Milenda']);
-
-  })
-})
+  });
+});
